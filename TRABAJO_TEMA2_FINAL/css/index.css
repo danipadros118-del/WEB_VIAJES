@@ -1,0 +1,414 @@
+/* Remover márgenes y padding por defecto */
+/* =========================================================
+   GUIA RAPIDA DE ESTE CSS
+   1) Estilos globales y home (index.html)
+   2) Tarjetas y carrusel
+   3) Responsive
+   4) Estilos de destinos.html
+   5) Estilos de contacto.html
+   6) Footer compartido
+   ========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+/* Estilos para la barra de navegación (navbar) */
+.navbar {
+    color: #217af7;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Estilos para el botón Reserva - aplica al enlace con clase Reserva */
+a.Reserva {
+    background-color: rgb(255, 255, 65) !important;
+    color: #000 !important;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 999px;
+    padding: 0.45rem 1.5rem !important;
+    display: inline-block;
+    border: none;
+
+}
+
+.navbar-brand,
+.navbar-nav,
+.nav-link,
+.nav-link {
+
+    color: white;
+}
+
+/* Variante de navbar usada en home */
+.navbar-custom {
+    background-color: rgb(22, 125, 180);
+}
+
+/* Limita alto visible del carrusel principal */
+.carouselExampleSlidesOnly {
+    max-height: 1000px;
+    overflow: hidden;
+}
+
+/* Imagenes del carrusel */
+.carousel-item img {
+    height: 700px;
+    object-fit: cover;
+}
+
+
+/* Estilos para el texto sobre el carrusel */
+.carousel-escrito {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    top: 80%;
+    left: 50%;
+    background-color: rgba(9, 9, 9, 0.5);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+/* Titulos de secciones destacadas */
+.destino-texto {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.texto-explicativo {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 1.25rem;
+    color: #555;
+}
+
+.card-title {
+
+    font-size: 1.5rem;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Estilos para la card de viaje personalizada */
+.card-trip {
+    max-width: 360px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(12, 35, 64, 0.12);
+    background: #fff;
+    margin: 2rem auto 4rem;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+.card-trip .card-top {
+    position: relative;
+}
+
+.card-trip img.card-img-top {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.promo-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #ff4d4f;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.card-trip .card-body {
+    padding: 1.25rem;
+}
+
+.title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.trip-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0b2540;
+}
+
+.trip-title.large {
+    font-size: 1.5rem;
+}
+
+.tag {
+    background: #1e88ff;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.description {
+    color: #6b7280;
+    margin-top: 0.6rem;
+    line-height: 1.5;
+}
+
+.meta-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    gap: 12px;
+}
+
+.rating {
+    color: #f5b400;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.rating .stars {
+    letter-spacing: 2px;
+}
+
+.popular {
+    background: #12c0ff;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.82rem;
+}
+
+.price-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.15rem;
+}
+
+.price-old {
+    text-decoration: line-through;
+    color: #9aa0a6;
+    font-size: 0.95rem;
+}
+
+.price-new {
+    color: #0a66ff;
+    font-weight: 800;
+    font-size: 1.6rem;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-primary-sm {
+    background: #0a66ff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+/* Grid de tarjetas en 3 columnas */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.cards-grid .card-trip {
+    max-width: 100%;
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilos para los indicadores del carrusel */
+.carousel-indicators {
+    position: static !important;
+    background: transparent;
+    padding: 1rem 0;
+    margin-top: 0;
+}
+
+.carousel-indicators button {
+    background-color: #ccc !important;
+    border: none !important;
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50%;
+    opacity: 0.7 !important;
+    margin: 0 6px !important;
+    transition: 0.3s;
+}
+
+.carousel-indicators button.active {
+    background-color: #0b2540 !important;
+    opacity: 1 !important;
+}
+
+.carousel-indicators button:hover {
+    opacity: 1 !important;
+}
+
+@media (min-width: 992px) {
+    .card-trip {
+        margin: 2.5rem 0;
+    }
+}
+
+/* ---------------- DESTINOS PAGE ---------------- */
+.destinos-page .hero-bg {
+    background-color: #1e6ff2;
+    padding-top: 84px;
+}
+
+.destinos-page .hero-title {
+    font-size: clamp(2.2rem, 6vw, 4.8rem);
+    font-weight: 700;
+}
+
+.destinos-page .filter-zone {
+    background-color: #f2f3f7;
+    border-top: 1px solid #e0e5ef;
+    border-bottom: 1px solid #e0e5ef;
+}
+
+.destinos-page .table thead th {
+    background-color: #c3d3ee;
+}
+
+.destinos-page .price {
+    color: #1e6ff2;
+    font-weight: 700;
+}
+
+.destinos-page .row-alt {
+    background-color: #f1f2f4;
+}
+
+.destinos-page .badge-premium {
+    background-color: #f4be17;
+    color: #222;
+}
+
+/* ---------------- CONTACTO PAGE ---------------- */
+.contact-page {
+    background-color: #f4f5f7;
+    color: #222;
+}
+
+.contact-page .navbar {
+    background-color: #0d6efd;
+}
+
+.contact-page .brand-btn {
+    background-color: #f7c400;
+    border: 0;
+    color: #222;
+    font-weight: 600;
+}
+
+.contact-page .contact-hero {
+    background: linear-gradient(180deg, #0d6efd 0%, #0b64eb 100%);
+    color: #fff;
+    padding: 8.5rem 0 6rem;
+}
+
+.contact-page .contact-hero h1 {
+    font-size: clamp(2rem, 6vw, 4rem);
+    font-weight: 700;
+}
+
+.contact-page .contact-card {
+    background: #fff;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.06);
+}
+
+.contact-page .icon-box {
+    width: 76px;
+    height: 76px;
+    border-radius: 0.6rem;
+    background-color: #0d6efd;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    flex-shrink: 0;
+}
+
+.contact-page .map-frame {
+    width: 100%;
+    min-height: 260px;
+    border: 0;
+    border-radius: 0.75rem;
+}
+
+.contact-page .social-circle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+
+/* ---------------- FOOTER COMPARTIDO ---------------- */
+.site-footer {
+    background: #1c2430;
+    color: #d6d9df;
+}
+
+.site-footer a {
+    color: #d6d9df;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    color: #fff;
+}

@@ -1,0 +1,319 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+    <!-- Configuracion  -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contacto | Destinos del Mundo</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+        crossorigin="anonymous"
+    />
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+</head>
+
+<body class="contact-page">
+    <!-- CABECERA  barra de navegacion  -->
+    <header>
+        <!-- NAVBAR: enlaces principales del sitio -->
+        <nav class="navbar navbar-expand-lg bg-primary navbar-custom fixed-top rounded-5">
+            <div class="container">
+                <a class="navbar-brand text-white fw-semibold" href="./index.html">
+                    <i class="bi bi-airplane-fill me-1"></i>Destinos del mundo
+                </a>
+
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                        <li class="nav-item"><a class="nav-link text-white-50" href="./index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link text-white-50" href="./destinos.html">Destinos</a></li>
+                        <li class="nav-item"><a class="nav-link text-white fw-semibold" href="./contacto.html">Contacto</a></li>
+                        <li class="nav-item ms-lg-2">
+                            <button
+                                class="btn brand-btn px-3"
+                                type="button"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modalReserva"
+                                aria-expanded="false"
+                            >
+                                <i class="bi bi-calendar-check me-1"></i>Reservar ahora
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!--  titulo y subtitulo de la pagina -->
+        <section class="contact-hero text-center">
+            <div class="container">
+                <h1>Contacta con nosotros</h1>
+                <p class="lead mb-0">Estamos aqui para ayudarte a planear tu viaje perfecto</p>
+            </div>
+        </section>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="pb-5">
+        <section class="container mt-n2 py-5">
+            <div class="row g-4 align-items-start">
+                <!-- COLUMNA IZQUIERDA: formulario de contacto -->
+                <div class="col-lg-7">
+                    <div class="contact-card p-4 p-md-5">
+                        <h2 class="mb-4">Envianos un mensaje</h2>
+
+                        <!-- Formulario principal de solicitud -->
+                        <form class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Nombre Completo *</label>
+                                <input type="text" class="form-control" required />
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Email *</label>
+                                <input type="email" class="form-control" required />
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Telefono</label>
+                                <input type="tel" class="form-control" placeholder="+34 600 000 000" />
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Destino de interes *</label>
+                                <select class="form-select" required>
+                                    <option selected disabled>Selecciona un destino</option>
+                                    <option>China</option>
+                                    <option>Phiphi</option>
+                                    <option>Egipto</option>
+                                    <option>Dubai</option>
+                                    <option>Mexico</option>
+                                    <option>Maldivas</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Numero de personas *</label>
+                                <input type="number" class="form-control" min="1" value="2" required />
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Fecha de viaje *</label>
+                                <input type="date" class="form-control" required />
+                            </div>
+                            <!-- Check de marketing opcional -->
+                            <div class="col-12">
+                                <label class="form-label">Mensaje o consulta *</label>
+                                <textarea class="form-control" rows="5" placeholder="Cuentanos sobre tu viaje ideal..." required></textarea>
+                            </div>
+                            <!-- Check legal obligatorio -->
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="news" />
+                                    <label class="form-check-label" for="news">Deseo recibir ofertas y novedades por email</label>
+                                </div>
+                            </div>
+                            <!-- Boton de envio -->
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="terms" required />
+                                    <label class="form-check-label" for="terms">
+                                        Acepto la <a href="#">politica de privacidad</a> y los <a href="#">terminos y condiciones</a> *
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary btn-lg w-100">
+                                    <i class="bi bi-send-fill me-2"></i>Enviar mensaje
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- COLUMNA DERECHA: datos de contacto, mapa y redes -->
+                <div class="col-lg-5">
+                    <div class="contact-card p-4 p-md-5 mb-4">
+                        <h2 class="mb-4">Informacion de contacto</h2>
+
+                        <!-- Item: direccion -->
+                        <div class="d-flex gap-3 mb-4">
+                            <div class="icon-box"><i class="bi bi-geo-alt-fill"></i></div>
+                            <div>
+                                <h5 class="mb-1">Direccion</h5>
+                                <p class="mb-0 text-secondary">Calle Falsa 123<br />28001 Madrid, Espana</p>
+                            </div>
+                        </div>
+
+                        <!-- Item: telefonos -->
+                        <div class="d-flex gap-3 mb-4">
+                            <div class="icon-box"><i class="bi bi-telephone-fill"></i></div>
+                            <div>
+                                <h5 class="mb-1">Telefono</h5>
+                                <p class="mb-0 text-secondary">+34 900 123 456<br />+34 900 123 457</p>
+                            </div>
+                        </div>
+
+                        <!-- Item: correos -->
+                        <div class="d-flex gap-3 mb-4">
+                            <div class="icon-box"><i class="bi bi-envelope-fill"></i></div>
+                            <div>
+                                <h5 class="mb-1">Email</h5>
+                                <p class="mb-0 text-secondary">info@destinosdelmundo.com<br />reservas@destinosdelmundo.com</p>
+                            </div>
+                        </div>
+
+                        <!--  horario -->
+                        <div class="d-flex gap-3">
+                            <div class="icon-box"><i class="bi bi-clock-fill"></i></div>
+                            <div>
+                                <h5 class="mb-1">Horario</h5>
+                                <p class="mb-0 text-secondary">Lunes - Viernes: 9:00 - 20:00<br />Sabados: 10:00 - 14:00<br />Domingos: Cerrado</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mapa de ubicacion -->
+                    <iframe
+                        class="map-frame shadow-sm"
+                        loading="lazy"
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=-3.722%2C40.412%2C-3.695%2C40.425&layer=mapnik&marker=40.418%2C-3.704"
+                        title="Mapa de ubicacion"
+                    ></iframe>
+
+                    <!-- Bloque de redes sociales -->
+                    <div class="contact-card p-4 text-center mt-4">
+                        <h3 class="h4 mb-4">Siguenos en redes sociales</h3>
+                        <div class="d-flex justify-content-center gap-3">
+                            <a class="social-circle border border-primary text-primary" href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                            <a class="social-circle border border-danger text-danger" href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                            <a class="social-circle border border-info text-info" href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                            <a class="social-circle border border-danger text-danger" href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- MODAL: formulario de reserva rapida -->
+    <div class="modal fade" id="modalReserva" tabindex="-1" aria-labelledby="modalReservaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title fw-bold" id="modalReservaLabel">
+                        <i class="bi bi-check2-square me-2"></i>Reserva rapida
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body p-4">
+                    <form id="formReserva">
+                        <div class="mb-3">
+                            <label for="nombreReserva" class="form-label fw-bold">Nombre completo <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="nombreReserva" placeholder="Tu nombre completo" required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="emailReserva" class="form-label fw-bold">Email <span class="text-danger">*</span></label>
+                            <input type="email" class="form-control" id="emailReserva" placeholder="tu@email.com" required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="destinoReserva" class="form-label fw-bold">Destino <span class="text-danger">*</span></label>
+                            <select class="form-select" id="destinoReserva" required>
+                                <option selected>Selecciona un destino</option>
+                                <option value="china">China, Asia</option>
+                                <option value="phiphi">Phiphi, Asia</option>
+                                <option value="egipto">Egipto, Africa</option>
+                                <option value="dubai">Dubai, Asia</option>
+                                <option value="mexico">Mexico, America</option>
+                                <option value="maldivas">Maldivas, Asia</option>
+                            </select>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="fechaReserva" class="form-label fw-bold">Fecha de viaje <span class="text-danger">*</span></label>
+                                    <input type="date" class="form-control" id="fechaReserva" required />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="personasReserva" class="form-label fw-bold">Personas <span class="text-danger">*</span></label>
+                                    <input type="number" class="form-control" id="personasReserva" min="1" value="2" required />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="terminosReserva" required />
+                            <label class="form-check-label" for="terminosReserva">
+                                Acepto los terminos y condiciones
+                            </label>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="modal-footer bg-light">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary fw-bold" id="btnEnviarReserva">Enviar reserva</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER ----- informacion-->
+    <footer class="site-footer pt-5 pb-3 mt-4">
+        <div class="container">
+            <div class="row g-4 pb-4 border-bottom border-secondary-subtle">
+                <div class="col-md-4">
+                    <h4 class="text-white mb-3"><i class="bi bi-airplane-fill me-1"></i>Destinos del mundo</h4>
+                    <p class="mb-3">Tu agencia de confianza para vivir experiencias inolvidables alrededor del mundo.</p>
+                    <div class="d-flex gap-3 fs-4">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <h4 class="text-white mb-3">Enlaces rapidos</h4>
+                    <ul class="list-unstyled m-0 fs-5">
+                        <li class="mb-1"><a href="./index.html">Inicio</a></li>
+                        <li class="mb-1"><a href="./destinos.html">Destinos</a></li>
+                        <li class="mb-1"><a href="./contacto.html">Contacto</a></li>
+                        <li class="mb-1"><a href="#">Sobre nosotros</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <h4 class="text-white mb-3">Contacto</h4>
+                    <ul class="list-unstyled m-0 fs-5">
+                        <li class="mb-1"><i class="bi bi-geo-alt-fill me-2"></i>Calle Falsa 123, Madrid</li>
+                        <li class="mb-1"><i class="bi bi-telephone-fill me-2"></i>+34 900 123 456</li>
+                        <li class="mb-1"><i class="bi bi-envelope-fill me-2"></i>info@destinosdelmundo.com</li>
+                        <li class="mb-1"><i class="bi bi-clock-fill me-2"></i>Lun-Vie: 9:00 - 20:00</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="text-center mb-0 mt-3">&copy; 2024 Destinos del mundo. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"
+    ></script>
+</body>
+</html>
